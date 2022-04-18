@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+.create-user {
+    padding: 15px;
+    text-align: center;
+}
+.create-user label {
+    display: block;
+}
+.create-user .btn-submit {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.update-user {
+    padding: 15px;
+    text-align: center;
+}
+
+.update-user label {
+    display: block;
+}
+.btn-save {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+.detail-user {
+    padding: 15px;
+    text-align: center;
+}
+.detail-user label {
+    display: block;
+    color: white;
+}
+
+.upload-file {
+    padding: 15px;
+}
+.upload-file label {
+    display: block;
+}
+/* h1 {
+    color: red;
+    border: 1px solid green;
+}
+
+img {
+    width: 100%;
+} */
+.found-container {
+    background-color: #95c2de;
+}
+
+.found-container .mainbox {
+    background-color: #95c2de;
+    margin: auto;
+    height: 600px;
+    width: 600px;
+    position: relative;
+}
+  
+.found-container .err {
+      color: #ffffff;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11rem;
+      position:absolute;
+      left: 20%;
+      top: 8%;
+}
+  
+.found-container .far {
+    position: absolute;
+    font-size: 8.5rem;
+    left: 42%;
+    top: 15%;
+    color: #ffffff;
+}
+  
+.found-container .err2 {
+      color: #ffffff;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11rem;
+      position:absolute;
+      left: 68%;
+      top: 8%;
+}
+  
+  
+.found-container a {
+    text-decoration: none;
+    color: white;
+}
+  
+.found-container a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/upload">Upload files</a>
+    </div>
+
+    <div>
+        <div class="w3-container">
+            <h2>List users Table</h2>
+            <form action="/create-user" method="get">
+                <button type="submit" class="btn btn-success">Create New</button>
+            </form>
+            <table class="w3-table-all w3-hoverable">
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i < dataUser.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= dataUser[i].id %>
+                            </td>
+                            <td>
+                                <%= dataUser[i].firstName %>
+                            </td>
+                            <td>
+                                <%= dataUser[i].lastName %>
+                            </td>
+                            <td style="display: flex; gap: 15px;">
+                                <form>
+                                    <button type="button"><a style="color: black;"
+                                            href="/detail/user/<%= dataUser[i].id %>">Details</a>
+                                    </button>
+                                </form>
+                                <!-- target="_blank" -->
+                                <form action="/edit-user/<%= dataUser[i].id %>" method="get">
+                                    <button type="submit">Edit</button>
+                                </form>
+                                <form action="/delete-user" method="post">
+                                    <input type="text" hidden value="<%= dataUser[i].id %>" name="userId" />
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+
+            </table>
+        </div>
+        <!-- <div class="create-user">
+            <form action="/create-new" method="post">
+                <div><b>Add New User</b></div>
+                <div>
+                    <label>FirstName:</label>
+                    <input type="text" name="firstName" />
+                </div>
+                <div>
+                    <label>LastName:</label>
+                    <input type="text" name="lastName" />
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email" />
+                </div>
+                <div>
+                    <label>Address:</label>
+                    <input type="text" name="address" />
+                </div>
+                <div>
+                    <button type="submit" class="btn-submit">Submit</button>
+                </div>
+            </form>
+        </div> -->
+    </div>
+    <!-- <img src="/image/abc.jpg" /> -->
+
+</body>
+
+</html>

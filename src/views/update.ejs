@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body style="background-image: url('/image/abc.jpg');">
+    <div class="update-user">
+        <form action="/update-user" method="post">
+
+            <div>
+                <label>First Name:</label>
+                <input name="firstName" value="<%= dataUser.firstName %>" />
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input name="lastName" value="<%= dataUser.lastName %>" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input name="email" value="<%= dataUser.email %>" />
+            </div>
+            <div>
+                <label>Address:</label>
+                <input name="address" value="<%= dataUser.address %>" />
+            </div>
+            <div>
+                <button class="btn-save" type="submit">Update</button>
+            </div>
+            <input type="text" value="<%= dataUser.id %>" hidden name="id" />
+        </form>
+    </div>
+</body>
+
+</html>
